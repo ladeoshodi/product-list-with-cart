@@ -3,7 +3,7 @@ import DessertList from "./components/dessertsPage/DessertList";
 
 function App() {
   return (
-    <div className="grid grid-cols-2 gap-2">
+    <div className="grid md:grid-cols-2 gap-4">
       <section>
         <DessertList />
       </section>
