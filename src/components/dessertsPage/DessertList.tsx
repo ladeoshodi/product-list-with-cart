@@ -1,8 +1,6 @@
 import desserts from "../../../data.json";
 import Dessert from "./Dessert";
 
-console.log(desserts);
-
 function DessertList() {
   return (
     <>
