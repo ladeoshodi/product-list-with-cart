@@ -1,5 +1,9 @@
 function Cart() {
-  return <p>Your Cart</p>;
+  return (
+    <section className="rounded-2xl bg-white p-4">
+      <p>Your Cart</p>
+    </section>
+  );
 }
 
 export default Cart;
