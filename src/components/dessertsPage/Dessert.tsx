@@ -13,15 +13,29 @@ interface IDessert {
   price: number;
 }
 
+interface IAddToCartButton {
+  id: number;
+}
+
+function AddToCartButton({ id }: IAddToCartButton) {
+  return (
+    <button
+      className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 border-2 rounded-3xl bg-white text-yellow-950 border-rose-400 py-2 px-6 w-4/5"
+      type="button"
+      data-id={id}
+    >
+      🛒 Add to Cart
+    </button>
+  );
+}
+
 function Dessert({ id, image, name, category, price }: IDessert) {
   return (
     <div>
-      <img
-        src={image.desktop}
-        alt={name}
-        sizes="(max-width: 500px) 400px, (max-width: 800px) 424px, 480px"
-        srcSet={`${image.mobile} 400w, ${image.tablet} 424w, ${image.desktop} 480w`}
-      />
+      <div className="relative">
+        <img src={image.desktop} alt={name} />
+        <AddToCartButton id={id} />
+      </div>
       <div className="mt-7">
         <h6 className="text-stone-400 text-sm">{category}</h6>
         <p className="font-semibold text-yellow-950">{name}</p>
