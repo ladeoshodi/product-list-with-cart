@@ -16,6 +16,7 @@ import orderConfirmedIcon from "../assets/images/icon-order-confirmed.svg";
 interface CartProps {
   cart: ICart;
   removeCartItem: (itemName: string, shouldRemoveAll?: boolean) => void;
+  setCart: (cart: ICart) => void;
 }
 
 interface CartModalProp {
@@ -24,6 +25,7 @@ interface CartModalProp {
   closeModal: () => void;
   getCartTotal: () => string;
   getItemTotal: (item: IDessert[]) => string;
+  setCart: (cart: ICart) => void;
 }
 
 function CartModal({
@@ -32,6 +34,7 @@ function CartModal({
   closeModal,
   getCartTotal,
   getItemTotal,
+  setCart,
 }: CartModalProp) {
   console.log(cart);
 
@@ -95,7 +98,10 @@ function CartModal({
             <button
               className="w-full border-2 rounded-3xl bg-orange-700 text-white border-orange-700 py-2 px-6 text-sm"
               type="button"
-              onClick={closeModal}
+              onClick={() => {
+                setCart({});
+                closeModal();
+              }}
             >
               Start New Order
             </button>
@@ -106,7 +112,7 @@ function CartModal({
   );
 }
 
-function Cart({ cart, removeCartItem }: CartProps) {
+function Cart({ cart, removeCartItem, setCart }: CartProps) {
   const [isOpen, setIsOpen] = useState(true);
 
   function closeModal() {
@@ -226,6 +232,7 @@ function Cart({ cart, removeCartItem }: CartProps) {
         closeModal={closeModal}
         getCartTotal={getCartTotal}
         getItemTotal={getItemTotal}
+        setCart={setCart}
       />
     </>
   );

@@ -39,7 +39,7 @@ function App() {
         />
       </section>
       <section>
-        <Cart cart={cart} removeCartItem={removeCartItem} />
+        <Cart cart={cart} removeCartItem={removeCartItem} setCart={setCart} />
       </section>
     </div>
   );
