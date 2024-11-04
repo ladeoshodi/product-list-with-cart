@@ -7,7 +7,7 @@ import emptyCart from "../assets/images/illustration-empty-cart.svg";
 
 interface CartProps {
   cart: ICart;
-  removeCartItem: (itemName: string) => void;
+  removeCartItem: (itemName: string, shouldRemoveAll?: boolean) => void;
 }
 
 function Cart({ cart, removeCartItem }: CartProps) {
@@ -65,7 +65,7 @@ function Cart({ cart, removeCartItem }: CartProps) {
                       <button
                         aria-label="Remove Item"
                         className="ml-auto"
-                        onClick={() => removeCartItem(itemName)}
+                        onClick={() => removeCartItem(itemName, true)}
                       >
                         <img src={removeItemIcon} />
                       </button>

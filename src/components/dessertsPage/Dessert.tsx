@@ -14,14 +14,14 @@ interface DessertProps {
   dessert: IDessert;
   cart: ICart;
   addToCart: (dessert: IDessert) => void;
-  removeCartItem: (itemName: string) => void;
+  removeCartItem: (itemName: string, shouldRemoveAll?: boolean) => void;
 }
 
 interface InCartButtonProp {
   quantity: number;
   dessert: IDessert;
   addToCart: (dessert: IDessert) => void;
-  removeCartItem: (itemName: string) => void;
+  removeCartItem: (itemName: string, shouldRemoveAll?: boolean) => void;
 }
 
 function AddToCartButton({ addToCart, dessert }: AddToCartButton) {

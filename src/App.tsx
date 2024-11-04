@@ -18,9 +18,9 @@ function App() {
     setCart(updateCart);
   }
 
-  function removeCartItem(itemName: string) {
+  function removeCartItem(itemName: string, shouldRemoveAll = false) {
     const currentCart = { ...cart };
-    if (currentCart[itemName].length <= 1) {
+    if (currentCart[itemName].length <= 1 || shouldRemoveAll) {
       delete currentCart[itemName];
     } else {
       currentCart[itemName].pop();

@@ -6,7 +6,7 @@ import Dessert from "./Dessert";
 interface DessertListProps {
   cart: ICart;
   addToCart: (dessert: IDessert) => void;
-  removeCartItem: (itemName: string) => void;
+  removeCartItem: (itemName: string, shouldRemoveAll?: boolean) => void;
 }
 
 function DessertList({ cart, addToCart, removeCartItem }: DessertListProps) {
