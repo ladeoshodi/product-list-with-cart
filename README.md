@@ -27,7 +27,15 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop View](./public/readme-assets/empty-state-desktop.png)
+
+![Confirm Order Desktop View](./public/readme-assets/confirm-order-desktop.png)
+
+![Dessert Mobile View](./public/readme-assets/desert-view-mobile.png)
+
+![Confirm Order Mobile View](./public/readme-assets/confirm-order-mobile.png)
+
+![Cart Mobile View](./public/readme-assets/cart-mobile.png)
 
 ### Links
 
@@ -47,6 +55,13 @@ Users should be able to:
 - Vite
 - React Testing Library
 - Vitest
+
+### Get Started
+
+1. Clone the repository
+2. Install dependencies with `npm i`
+3. Start the dev environment with `npm run dev`
+4. Run test with `npm test`
 
 ## Author
 
