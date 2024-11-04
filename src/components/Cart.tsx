@@ -34,7 +34,9 @@ function Cart({ cart, removeCartItem }: CartProps) {
 
   return (
     <section className="rounded-2xl bg-white p-4">
-      <p className="text-orange-700 font-bold">Your Cart ({getCartLength()})</p>
+      <p className="text-orange-700 font-bold">
+        Your Cart (<span className="cartItemCount">{getCartLength()}</span>)
+      </p>
       {getCartLength() > 0 ? (
         <>
           <div className="my-4">
@@ -61,7 +63,8 @@ function Cart({ cart, removeCartItem }: CartProps) {
                       </div>
 
                       <button
-                        className="ml-auto removeCartItem"
+                        aria-label="Remove Item"
+                        className="ml-auto"
                         onClick={() => removeCartItem(itemName)}
                       >
                         <img src={removeItemIcon} />
