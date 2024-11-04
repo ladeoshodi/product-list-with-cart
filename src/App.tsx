@@ -32,7 +32,11 @@ function App() {
   return (
     <div className="grid lg:grid-cols-[1fr_250px] gap-6">
       <section>
-        <DessertList addToCart={addToCart} />
+        <DessertList
+          cart={cart}
+          addToCart={addToCart}
+          removeCartItem={removeCartItem}
+        />
       </section>
       <section>
         <Cart cart={cart} removeCartItem={removeCartItem} />
