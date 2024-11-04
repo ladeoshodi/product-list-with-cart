@@ -6,9 +6,10 @@ import removeItemIcon from "../assets/images/icon-remove-item.svg";
 
 interface CartProps {
   cart: ICart;
+  removeCartItem: (itemName: string) => void;
 }
 
-function Cart({ cart }: CartProps) {
+function Cart({ cart, removeCartItem }: CartProps) {
   function getCartLength() {
     let total = 0;
     for (const item in cart) {
@@ -56,7 +57,10 @@ function Cart({ cart }: CartProps) {
                     </h6>
                   </div>
 
-                  <button className="ml-auto">
+                  <button
+                    className="ml-auto removeCartItem"
+                    onClick={() => removeCartItem(itemName)}
+                  >
                     <img src={removeItemIcon} />
                   </button>
                 </div>

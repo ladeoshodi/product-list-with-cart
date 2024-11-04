@@ -18,13 +18,24 @@ function App() {
     setCart(updateCart);
   }
 
+  function removeCartItem(itemName: string) {
+    const currentCart = { ...cart };
+    if (currentCart[itemName].length <= 1) {
+      delete currentCart[itemName];
+    } else {
+      currentCart[itemName].pop();
+    }
+
+    setCart(currentCart);
+  }
+
   return (
     <div className="grid lg:grid-cols-[1fr_250px] gap-6">
       <section>
         <DessertList addToCart={addToCart} />
       </section>
       <section>
-        <Cart cart={cart} />
+        <Cart cart={cart} removeCartItem={removeCartItem} />
       </section>
     </div>
   );

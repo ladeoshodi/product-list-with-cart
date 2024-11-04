@@ -12,7 +12,7 @@ function Dessert({ addToCart, dessert }: DessertProps) {
       <div className="relative">
         <img src={dessert.image.desktop} alt={dessert.name} />
         <button
-          className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 border-2 rounded-3xl bg-white text-yellow-950 border-orange-700 py-2 px-6 w-4/5"
+          className="absolute bottom-[-20px] left-1/2 transform -translate-x-1/2 border-2 rounded-3xl bg-white text-yellow-950 border-orange-700 py-2 px-6 w-4/5 addCartItem"
           type="button"
           onClick={() => addToCart(dessert)}
         >
