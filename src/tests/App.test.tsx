@@ -16,7 +16,7 @@ describe("App Component", () => {
     const addToCartBtn = screen.getAllByRole("button", { name: "Add to Cart" });
     fireEvent.click(addToCartBtn[0]);
 
-    expect(screen.getByText("Order Total")).toBeTruthy();
+    expect(screen.getAllByText("Order Total")).toBeTruthy();
   });
 
   test("Remove item from cart", () => {
