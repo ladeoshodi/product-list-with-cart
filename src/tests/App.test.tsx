@@ -1,11 +1,12 @@
 import { describe, expect, test } from "vitest";
 import { render, screen } from "@testing-library/react";
 
-import DessertList from "../components/dessertsPage/DessertList";
+import App from "../App";
 
-describe("Desserts Page", () => {
-  test("Dessert page renders", () => {
-    render(<DessertList />);
+describe("App Component", () => {
+  test("App renders", () => {
+    render(<App />);
     expect(screen.getByText("Desserts")).toBeTruthy();
+    expect(screen.getByText(/Your Cart/)).toBeTruthy();
   });
 });

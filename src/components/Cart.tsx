@@ -1,13 +1,36 @@
 import carbonNeutralIcon from "../assets/images/icon-carbon-neutral.svg";
+import { ICart } from "../types/cart";
 
-function Cart() {
+interface CartProps {
+  cart: ICart;
+}
+
+function Cart({ cart }: CartProps) {
+  function getCartLength() {
+    let total = 0;
+    for (const item in cart) {
+      total += cart[item].length;
+    }
+
+    return total;
+  }
+  function getCartTotal() {
+    let totalPrice = 0;
+    for (const item in cart) {
+      totalPrice += cart[item].reduce((acc, curr) => acc + curr.price, 0);
+    }
+
+    return totalPrice;
+  }
+
   return (
     <section className="rounded-2xl bg-white p-4">
-      <p className="text-orange-700 font-bold">Your Cart</p>
+      <p className="text-orange-700 font-bold">Your Cart ({getCartLength()})</p>
       <div className="my-4">
         <div>{/* cart items */}</div>
-        <div className="flex">
-          Order Total <span className="ml-auto">total</span>
+        <div className="flex items-center">
+          <span className="text-xs">Order Total</span>{" "}
+          <span className="ml-auto font-bold text-lg">${getCartTotal()}</span>
         </div>
       </div>
       <div className="py-4 my-4 bg-rose-50 rounded-lg">
