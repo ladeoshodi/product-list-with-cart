@@ -36,8 +36,6 @@ function CartModal({
   getItemTotal,
   setCart,
 }: CartModalProp) {
-  console.log(cart);
-
   return (
     <Dialog open={isOpen} onClose={closeModal} className="relative z-50">
       <div className="fixed inset-0 bg-black/30" aria-hidden="true" />
@@ -113,7 +111,7 @@ function CartModal({
 }
 
 function Cart({ cart, removeCartItem, setCart }: CartProps) {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   function closeModal() {
     setIsOpen(false);

@@ -39,7 +39,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+- Live Site URL: [Live Site](https://product-page-example.netlify.app/)
 
 ## My process
 
