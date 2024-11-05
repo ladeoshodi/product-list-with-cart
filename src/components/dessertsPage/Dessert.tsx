@@ -1,6 +1,6 @@
-import addToCartIcon from "../../assets/images/icon-add-to-cart.svg";
-import increaseQuantityIcon from "../../assets/images/icon-increment-quantity.svg";
-import decreaseQuantityIcon from "../../assets/images/icon-decrement-quantity.svg";
+import addToCartIcon from "/assets/images/icon-add-to-cart.svg";
+import increaseQuantityIcon from "/assets/images/icon-increment-quantity.svg";
+import decreaseQuantityIcon from "/assets/images/icon-decrement-quantity.svg";
 
 import { IDessert } from "../../types/dessert";
 import { ICart } from "../../types/cart";

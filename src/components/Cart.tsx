@@ -8,10 +8,10 @@ import {
 import { ICart } from "../types/cart";
 import { IDessert } from "../types/dessert";
 
-import carbonNeutralIcon from "../assets/images/icon-carbon-neutral.svg";
-import removeItemIcon from "../assets/images/icon-remove-item.svg";
-import emptyCart from "../assets/images/illustration-empty-cart.svg";
-import orderConfirmedIcon from "../assets/images/icon-order-confirmed.svg";
+import carbonNeutralIcon from "/assets/images/icon-carbon-neutral.svg";
+import removeItemIcon from "/assets/images/icon-remove-item.svg";
+import emptyCart from "/assets/images/illustration-empty-cart.svg";
+import orderConfirmedIcon from "/assets/images/icon-order-confirmed.svg";
 
 interface CartProps {
   cart: ICart;
