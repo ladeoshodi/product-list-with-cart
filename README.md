@@ -27,6 +27,8 @@ Users should be able to:
 
 ### Screenshot
 
+![Desktop View Gif](./public/readme-assets/product-list.gif)
+
 ![Desktop View](./public/readme-assets/empty-state-desktop.png)
 
 ![Confirm Order Desktop View](./public/readme-assets/confirm-order-desktop.png)
